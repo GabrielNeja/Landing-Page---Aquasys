@@ -91,7 +91,7 @@
     }
 
     ul li {
-        margin-inline-end: 2rem; 
+        margin-inline-end: 2.5rem; 
     }
 
     @media (width >= 1280px) {
