@@ -50,6 +50,11 @@
     cursor: pointer; 
 }    
 
+.header {
+    height: 95px;
+
+}
+
 @media (min-width: 1280px) {
     header {
         position: relative;

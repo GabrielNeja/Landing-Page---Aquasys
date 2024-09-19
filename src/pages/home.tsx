@@ -25,7 +25,7 @@ export default function Home() {
     return (
         <>
             <header className="container py-sm">
-                <nav className="flex items-center justify-between">
+                <nav className="flex items-center justify-between header">
                     <img src={Logo} alt="Logo Aquasys" width={220} height={150} />
 
                     <div className="desktop-only">
