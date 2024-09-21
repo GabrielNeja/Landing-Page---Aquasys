@@ -16,7 +16,7 @@
 
 #solution p {
     color: var(--second-text-color);
-    font-size: 1.25rem }
+    font-size: 1.55rem }
 
 #solution strong {
     color: var(--primary-color);
@@ -29,7 +29,7 @@
 }
 
 .card {
-    background: var(--light-gray);
+    background: #dcdcdc;
     box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
     max-inline-size: 20.25rem;
     min-block-size: 26rem;
@@ -45,7 +45,6 @@
 
 .card h3 {
     font-size: 1.5rem;
-    
 }
 
 .card p {

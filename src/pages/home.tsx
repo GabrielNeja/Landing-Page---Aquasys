@@ -40,7 +40,7 @@ export default function Home() {
 
                     <div className="desktop-only">
                         <div className="flex items-center">
-                            <a className="reverse-color ml-lg" href="">Login</a>
+                            <a className="reverse-color ml-lg" href="">LOGIN</a>
                             <Button text="Cadastre-se" />
                         </div>
                     </div>
@@ -56,7 +56,7 @@ export default function Home() {
                                         <li><a href="#pricing">Preços</a></li>
                                         <li><a href="#contact">Contato</a></li>
                                         <li>
-                                            <a className="reverse-color" href="#">Login</a> 
+                                            <a className="reverse-color" href="#">LOGIN</a> 
                                         </li>
                                     </ul>
                                     
