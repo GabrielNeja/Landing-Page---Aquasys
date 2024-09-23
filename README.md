@@ -1,4 +1,4 @@
-# Aquasys - landing Page
+# Aquasys - Landing Page
 
 Esta é a landing page do Aqusys, uma aplicativo voltado para o gerenciamento de navios e suas cargas ao chegar no porto. A página fornecerá informações sobre as principais soluções e funcionalidades do sistema, com foco em atrair novos usuários e parceiros.
 
