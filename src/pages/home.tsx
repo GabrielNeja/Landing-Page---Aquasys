@@ -3,6 +3,10 @@ import Logo from "../assets/logo1.svg";
 import Menu from "../assets/hamburguer.svg"
 import Close from "../assets/close.svg" 
 import Champion from "../assets/champion.svg"
+import ProfileImageOne from  "../assets/images/profileImageOne.png"
+import ProfileImageTwo from "../assets/images/profileImageTwo.png"
+import Star from "../assets/images/star.png"
+import Check from "../assets/images/check.png"
 import Button from "../components/button"
 import "../styles/header.css";
 import "../styles/index.css";
@@ -10,6 +14,11 @@ import "../styles/utility.css";
 import "../styles/button.css"
 import "../styles/hero.css";
 import "../styles/solutions.css"
+import "../styles/testimonials.css"
+import "../styles/pricing.css"
+import "../styles/contact.css"
+import "../styles/footer.css"
+import { sendEmail } from '../utils/sendEmail';
 
 
 export default function Home() {
@@ -138,9 +147,254 @@ export default function Home() {
                     <hr />
                 </div>
             </section>
-   
-           
+
+            <section id="testimonials">
+                <header>
+                    <span>
+                        <p className="desktop-only">
+                            Conselho de quem conhece
+                        </p>
+                        <h2>Cada cliente importa!</h2>
+                    </span>
+                    <p>
+                    Quem já utiliza o Aquasys conhece a eficiência e a inovação que ele entrega. Estamos desafiando a ideia de que sistemas de gestão portuária precisam ser complicados e ineficazes. 
+                    Confira abaixo os depoimentos de quem já adotou o Aquasys e aprovou!
+                    </p>
+                </header>
+                <section className="carousel">
+                    <div className="carousel-content">
+                        <div className="carousel-card">
+                            <img src={ProfileImageOne} alt="Imagem perfil cliente" />
+                            <span className="testimony">
+                                <p>
+                                O Aquasys transformou completamente a maneira como gerenciamos nossos navios e cargas. 
+                                Antes, enfrentávamos muitos atrasos e problemas na comunicação entre equipes, mas agora, tudo é feito de forma integrada e eficiente.
+                                </p>
+                            </span> 
+                            <span className="rating">
+                                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                            </span>  
+                            <span className="names">
+                                <p>Ellon Ma</p>
+                                <p>GERENTE DE OPERAÇÕES PORTUÁRIAS</p>
+                            </span> 
+                        </div>
+                    </div>
+
+                    <div className="carousel-content">
+                        <div className="carousel-card">
+                            <img src={ProfileImageTwo} alt="Imagem perfil cliente" />
+                            <span className="testimony">
+                                <p>
+                                A automação de processos do Aquasys trouxe uma economia significativa de tempo e recursos para nossa operação. 
+                                O sistema é intuitivo, confiável e a segurança dos dados é impressionante.
+                                </p>
+                            </span> 
+                            <span className="rating">
+                                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                            </span>  
+                            <span className="names">
+                                <p>Ryan Gosling</p>
+                                <p>DIRETOR DE LOGÍSTICA PORTUÁRIA</p>
+                            </span> 
+                        </div>
+                    </div>
+
+                    <div className="carousel-content">
+                        <div className="carousel-card">
+                            <img src={ProfileImageOne} alt="Imagem perfil cliente" />
+                            <span className="testimony">
+                                <p>
+                                O fato de o sistema ser tão bem projetado, com funcionalidades específicas para o nosso setor, 
+                                faz toda a diferença. Recomendo sem dúvidas!
+                                </p>
+                            </span> 
+                            <span className="rating">
+                                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                            </span>  
+                            <span className="names">
+                                <p>RICHARD MILLE</p>
+                                <p>ANALISTA DE GESTÃO DE CARGAS</p>
+                            </span> 
+                        </div>
+                    </div>
+                </section>    
+            </section> 
+
+            <section id="pricing" className="container">
+                <header>
+                    <p className="desktop-only">Planos e preços</p>
+                    <h2>Nossos planos</h2>
+                </header>
+                <section className="even-columns gap-1.5">
+                    <div className="pricing-card">
+                        <span className="plan">
+                            <h3>Básico</h3>
+                            <p>Ideal para pequenas empresas portuárias.</p>
+                        </span>
+                        <span className="price">
+                            <h2>Grátis</h2> 
+                        </span>
+                        <Button text="Pedir agora" secondary key="free" />
+                        <span className="hr" />
+                        <span className="features">
+                            <img src={Check} alt="ícone check" width={24} height={24} />
+                            <p>Gestão simplificada de cargas.</p>
+                        </span>
+                        <span className="features">
+                            <img src={Check} alt="ícone check" width={24} height={24} />
+                            <p>Monitoramento básico de navios.</p>
+                        </span>
+                    </div>
+
+                    <div className="pricing-card premium">
+	                    <span className="bonus">
+		                    <p>1º MÊS COM DESCONTO</p>
+	                    </span>
+	                    <span className="plan">
+                            <h3>Premium</h3>
+                            <p>Perfeito para empresas de grande porte</p>
+                        </span>
+                        <span className="price">
+                            <h2>R$ 499,90 </h2> 
+                            <p>/mês</p>
+                        </span>
+                        <Button text="Pedir agora" key="premium" />
+                        <span className="hr" />
+                        <span className="features">
+                            <img src={Check} alt="ícone check" width={24} height={24} />
+                            <p>Monitoramento em tempo real e automação avançada.</p>
+                        </span>
+                        <span className="features">
+                            <img src={Check} alt="ícone check" width={24} height={24} />
+                            <p>Relatórios personalizados.</p>
+                        </span>
+                        <span className="features">
+                            <img src={Check} alt="ícone check" width={24} height={24} />
+                            <p>Suporte completo.</p>
+                        </span>
+                    </div>
+
+                    <div className="pricing-card">
+                        <span className="plan">
+                            <h3>Empresarial</h3>
+                            <p>Perfeito para empresas de médio porte.</p>
+                        </span>
+                        <span className="price">
+                            <h2>R$ 199,90 </h2> 
+                            <p>/mês</p>
+                        </span>
+                        <Button text="Pedir agora" secondary key="free" />
+                        <span className="hr" />
+                        <span className="features">
+                            <img src={Check} alt="ícone check" width={24} height={24} />
+                            <p>Gestão completa de cargas.</p>
+                        </span>
+                        <span className="features">
+                            <img src={Check} alt="ícone check" width={24} height={24} />
+                            <p>Automação de processos portuários.</p>
+                        </span>
+                    </div>
+                </section>
+            </section>
+
+                <section id="contact" className="container">
+                    <header>
+                        <p className="highlight">Envie sua dúvida</p>
+                        <h2>Entre em contato</h2>
+                        <p className="description">
+                            Entre em contato, estamos dispostos a tirar qualquer dúvida, seja um orçamento, uma dúvida técnica de algum de nossos produtos. Estamos à disposição para responder. 😎
+                        </p>
+                    </header>
+                    <form
+                        className="contact-form"
+                        onSubmit={async (e) => {
+                        e.preventDefault();
+
+                        const form = e.target as HTMLFormElement;
+                        const email = form.email.value;
+                        const content = form.content.value;
+
+                        try {
+                            // Chama a função sendEmail
+                            await sendEmail(email, content);
+
+                            alert('E-mail enviado com sucesso!');
+                        } catch (err) {
+                            console.error('Erro ao enviar o e-mail:', err);
+                            alert('Erro ao enviar o e-mail. Tente novamente.');
+                        }
+                        }}
+                        >
+                        <input
+                        type="email"
+                        name="email"
+                        placeholder="Seu melhor Email"
+                        required
+                        aria-label="Seu melhor Email"
+                        />
+                        <textarea
+                        name="content"
+                        placeholder="Motivo do contato. Ex: Gostei muito do produto Aqusys, poderia me enviar um orçamento?"
+                        rows={4}
+                        required
+                        aria-label="Motivo do contato"
+                        ></textarea>
+                        <button type="submit">Enviar</button>
+                    </form>
+                </section>
+
+            <footer className="footer">
+                <div className="footer-content">
+                    <div className="footer-logo">
+                        <h3><img src={Logo} alt="Logo Aquasys" width={200} height={150} /></h3>
+                    </div>
+                    <div className="footer-links">
+                        <div>
+                            <ul>
+                                <li><a href="#">EMPRESA</a></li>
+                                <li><a href="#">Sobre nós</a></li>
+                                <li><a href="#">Faça parte do time</a></li>
+                                <li><a href="#">Blog</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul>
+                                <li><a href="#">FUNCIONALIDADES</a></li>
+                                <li><a href="#">Marketing</a></li>
+                                <li><a href="#">Análise de dados</a></li>
+                                <li><a href="#">Boot discord</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul>
+                                <li><a href="#">RECURSOS</a></li>
+                                <li><a href="#">IOS & Android</a></li>
+                                <li><a href="#">Teste a Demo</a></li>
+                                <li><a href="#">Clientes</a></li>
+                                <li><a href="#">API</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div className="footer-bottom">
+                    <p>
+                        Feito com amor na aula de Programação Web 💙 ©2024 Aquasys - Todos os direitos reservados.
+                    </p>
+                </div>
+            </footer>          
         </>
-        
     );
 }

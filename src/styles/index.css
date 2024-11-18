@@ -16,10 +16,10 @@
 :root {
     --bg-color: #FFF;
     --text-color: #252B42;
-    --second-text-color: #1a1717;
-    --light-text-color: #ffffff; 
-    --light-gray: #0080ff;
-    --primary-color: #011437;
+    --second-text-color: #737373;
+    --light-text-color: #FFF;
+    --light-gray: #F8F8F8;
+    --primary-color: #23A6F0;
     --secondary-color: #B2E3FF;
 
     --ff-sans: "Montserrat", system-ui, sans-serif;
