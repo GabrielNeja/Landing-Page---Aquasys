@@ -214,7 +214,7 @@ export default function Home() {
                             <span className="testimony">
                                 <p>
                                 O fato de o sistema ser tão bem projetado, com funcionalidades específicas para o nosso setor, 
-                                faz toda a diferença. Recomendo sem dúvidas!
+                                faz toda a diferença. Recomendo sem dúvidas.
                                 </p>
                             </span> 
                             <span className="rating">
