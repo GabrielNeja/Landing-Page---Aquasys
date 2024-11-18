@@ -1,50 +1,25 @@
-# React + TypeScript + Vite
+# Aquasys - Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Esta é a landing page do Aqusys, uma aplicativo voltado para o gerenciamento de navios e suas cargas ao chegar no porto. A página fornecerá informações sobre as principais soluções e funcionalidades do sistema, com foco em atrair novos usuários e parceiros.
 
-Currently, two official plugins are available:
+## Descrição
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A landing page do Aquasys apresentará de forma clara e objetiva as soluções oferecidas pelo aplicativo, destacando os benefícios do gerenciamento eficiente de navios e cargas. Ela esta sendo desenvolvida com foco em conversão, convidando usuários a se cadastrar e conhecer mais sobre a plataforma.
 
-## Expanding the ESLint configuration
+## Funcionalidades
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Apresentação das soluções da plataforma
+- Botões de call-to-action (cadastro e login)
+- Seção de depoimentos e vantagens do uso do Aquasys
+- Design responsivo
 
-- Configure the top-level `parserOptions` property like this:
+## Tecnologias
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- Frontend: React, TypeScript, Css
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Acesso Web 
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- Acesse a landing page em https://aquasys.netlify.app/ para visualizar e testar as funcionalidades.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+EM CONSTRUÇÃO !!
+
